@@ -993,6 +993,22 @@ subr_make_bytevector(VM* vm, int argc, scm_obj_t argv[])
     return scm_undef;
 }
 
+// bytevector-data-ptr
+scm_obj_t
+subr_bytevector_data_ptr(VM* vm, int argc, scm_obj_t argv[])
+{
+  if (argc == 1) {
+    if ((BVECTORP(argv[0])) || (BVECTORMAPPINGP(argv[0]))) {
+      scm_bvector_t bvector = (scm_bvector_t)argv[0];
+      return MAKEFIXNUM(bvector->elts);
+    } 
+    wrong_type_argument_violation(vm, "bytevector-data-ptr", 0, "bytevector", argv[0], argc, argv);
+    return scm_undef;
+  }
+  wrong_number_of_arguments_violation(vm, "bytevector-data-ptr", 1, 1, argc, argv);
+  return scm_undef;
+}
+
 // bytevector-length
 scm_obj_t
 subr_bytevector_length(VM* vm, int argc, scm_obj_t argv[])
@@ -1795,6 +1811,7 @@ void init_subr_bvector(object_heap_t* heap)
     DEFSUBR("native-endianness", subr_native_endianness);
     DEFSUBR("bytevector?", subr_bytevector_pred);
     DEFSUBR("make-bytevector", subr_make_bytevector);
+    DEFSUBR("bytevector-data-ptr", subr_bytevector_data_ptr);
     DEFSUBR("bytevector-length", subr_bytevector_length);
     DEFSUBR("bytevector=?", subr_bytevector_eq_pred);
     DEFSUBR("bytevector-fill!", subr_bytevector_fill);

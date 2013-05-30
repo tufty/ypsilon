@@ -1,0 +1,5 @@
+*~
+*.dylib
+*.d
+*.o
+/ypsilon

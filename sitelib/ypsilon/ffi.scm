@@ -24,6 +24,7 @@
           define-c-struct-methods
           c-sizeof
           c-coerce-void*
+          bytevector-data-ptr
           bytevector-c-bool-ref
           bytevector-c-short-ref
           bytevector-c-int-ref

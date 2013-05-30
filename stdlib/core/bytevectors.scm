@@ -13,6 +13,7 @@
           bytevector-uint-ref bytevector-sint-ref bytevector-uint-set! bytevector-sint-set!
           bytevector->uint-list bytevector->sint-list
           uint-list->bytevector sint-list->bytevector
+          bytevector-data-ptr
           bytevector-u16-ref bytevector-s16-ref bytevector-u16-native-ref bytevector-s16-native-ref
           bytevector-u16-set! bytevector-s16-set! bytevector-u16-native-set! bytevector-s16-native-set!
           bytevector-u32-ref bytevector-s32-ref bytevector-u32-native-ref bytevector-s32-native-ref
