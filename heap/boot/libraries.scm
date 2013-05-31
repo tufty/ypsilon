@@ -363,6 +363,7 @@
                         native-endianness
                         bytevector?
                         make-bytevector
+                        bytevector-data-ptr
                         bytevector-length
                         bytevector=?
                         bytevector-fill!

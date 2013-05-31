@@ -11,7 +11,6 @@
           c-sizeof
           c-coerce-void*
           make-bytevector-mapping
-          bytevector-data-ptr
           bytevector-c-bool-ref
           bytevector-c-short-ref
           bytevector-c-int-ref
@@ -113,7 +112,7 @@
           alignof:int32_t
           alignof:int64_t)
 
-  (import (core))
+  (import (core) (core intrinsics))
 
   (define sizeof:bool       (architecture-feature 'sizeof:bool))
   (define sizeof:int        (architecture-feature 'sizeof:int))
