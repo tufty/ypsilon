@@ -92,7 +92,6 @@
     bytevector->string
     bytevector->u8-list
     bytevector->uint-list
-    bytevector-data-ptr
     bytevector-c-double-ref
     bytevector-c-double-set!
     bytevector-c-float-ref

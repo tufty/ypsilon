@@ -11,6 +11,7 @@
           c-sizeof
           c-coerce-void*
           make-bytevector-mapping
+          bytevector-data-ptr
           bytevector-c-bool-ref
           bytevector-c-short-ref
           bytevector-c-int-ref
